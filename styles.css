@@ -295,18 +295,6 @@ body {
   position: relative;
 }
 
-.logo h2::before {
-  content: '< ';
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-}
-
-.logo h2::after {
-  content: ' />';
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-}
-
 .logo span {
   background: var(--holographic);
   -webkit-background-clip: text;
