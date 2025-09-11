@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Media | Futuristic Digital Solutions & Communication</title>
+    
+    <!-- Futuristic Design System -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Futuristic Meta Tags -->
+    <meta name="description" content="Experience the future of digital communication with Brandon Media - Africa's leading futuristic communication agency">
+    <meta name="theme-color" content="#1e3a8a">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="images/brenda.jpg" as="image">
+    <link rel="preload" href="styles.css" as="style">
+</head>
+<body class="futuristic-interface">
+    <!-- Holographic Loading Screen -->
+    <div class="holographic-loader" id="holoLoader">
+        <div class="holo-spinner">
+            <div class="holo-ring"></div>
+            <div class="holo-ring"></div>
+            <div class="holo-ring"></div>
+        </div>
+        <div class="loading-text">INITIALIZING BRANDON MEDIA INTERFACE</div>
+    </div>
+    
+    <!-- Futuristic Cursor -->
+    <div class="cyber-cursor" id="cyberCursor"></div>
+    
+    <!-- Holographic Background Matrix -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h2>Brandon<span>Media</span></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax and Tech Elements -->
+    <section id="home" class="hero parallax-container">
+        <div class="tech-bg">
+            <div class="tech-element" style="top: 10%; left: 5%; animation-delay: 0s;">💻</div>
+            <div class="tech-element" style="top: 20%; right: 10%; animation-delay: 1s;">🌐</div>
+            <div class="tech-element" style="top: 60%; left: 15%; animation-delay: 2s;">📱</div>
+            <div class="tech-element" style="top: 70%; right: 5%; animation-delay: 3s;">⚡</div>
+            <div class="tech-element" style="top: 30%; left: 75%; animation-delay: 4s;">🚀</div>
+            <div class="tech-element" style="top: 80%; left: 60%; animation-delay: 5s;">💡</div>
+            <div class="tech-element" style="top: 15%; left: 40%; animation-delay: 2.5s;">🎯</div>
+            <div class="tech-element" style="top: 45%; right: 25%; animation-delay: 1.5s;">📊</div>
+        </div>
+        <div class="slideshow-container parallax-bg">
+            <div class="slide active" data-section="home">
+                <div class="slide-overlay"></div>
+                <img src="images/brenda.jpg" alt="Brandon Media - Professional Communication Solutions" loading="eager">
+            </div>
+            <div class="slide" data-section="about">
+                <div class="slide-overlay"></div>
+                <img src="images/brenda.jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
+            </div>
+            <div class="slide" data-section="services">
+                <div class="slide-overlay"></div>
+                <img src="images/Media campaigns.jpeg" alt="Media Campaigns & Strategic Solutions" loading="lazy">
+            </div>
+            <div class="slide" data-section="branding">
+                <div class="slide-overlay"></div>
+                <img src="images/branding.jpeg" alt="Professional Branding Solutions" loading="lazy">
+            </div>
+            <div class="slide" data-section="social">
+                <div class="slide-overlay"></div>
+                <img src="images/Social-Media-Management-Tools.png" alt="Social Media Management Tools" loading="lazy">
+            </div>
+            <div class="slide" data-section="podcast">
+                <div class="slide-overlay"></div>
+                <img src="images/podcast.jpeg" alt="Podcast Studio Services" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-content parallax-element" data-speed="0.5">
+            <h1 class="hero-title">Welcome to <span>Brandon Media</span></h1>
+            <p class="hero-subtitle">🚀 Your Futuristic Communication & Digital Growth Partner in Africa</p>
+            <p class="hero-description">
+                <strong>💻 Let Technology Do The Hard Marketing Work For Your SME.</strong><br>
+                With cutting-edge digital strategies and years of professional experience in modern communication,
+                we help businesses navigate the digital landscape and establish powerful connections 
+                with their target audience through innovative, tech-driven solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">🌐 Explore Our Services</a>
+                <a href="MentrX Profile - V2 - 2025.pdf" class="btn btn-secondary" download>
+                    <i class="fas fa-download"></i> 📄 Download Profile
+                </a>
+            </div>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot active" onclick="currentSlide(1)" data-tooltip="Home"></span>
+            <span class="dot" onclick="currentSlide(2)" data-tooltip="About"></span>
+            <span class="dot" onclick="currentSlide(3)" data-tooltip="Services"></span>
+            <span class="dot" onclick="currentSlide(4)" data-tooltip="Branding"></span>
+            <span class="dot" onclick="currentSlide(5)" data-tooltip="Social Media"></span>
+            <span class="dot" onclick="currentSlide(6)" data-tooltip="Podcast"></span>
+        </div>
+    </section>
+
+    <!-- About Section with Background -->
+    <section id="about" class="about section-with-bg">
+        <div class="container">
+            <h2 class="section-title">About Brandon Media</h2>
+            
+            <!-- Vision Statement -->
+            <div class="vision-box">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>To be the go-to communication management and growth partner in Africa</p>
+            </div>
+            
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            <strong>Brandon Media</strong> is a leading outdoor advertising and communications agency with presence 
+                            in both Uganda and Kenya. We specialize in different forms of advertisements including ferry branding, 
+                            billboards, digital screens, and comprehensive communication strategies. From compelling marketing 
+                            campaigns to managing public relations, we provide strategic advice to clients and use appropriate 
+                            platforms to improve communication.
+                        </p>
+                        <p>
+                            Founded by <strong>Brenda Adong</strong>, a communications expert with over 7 years' experience 
+                            in Public Relations Management, Brandon Media has become a trusted partner for businesses 
+                            seeking to enhance their brand presence and communication strategies.
+                        </p>
+                        <p>
+                            Brenda is also a confidence expert on a mission to empower girls and women to launch, 
+                            grow and scale businesses. She helps women overcome self-doubt to perform at their best, 
+                            bringing this empowerment philosophy to every project we undertake.
+                        </p>
+                        <p>
+                            Our comprehensive approach combines strategic thinking with creative execution to deliver 
+                            results that exceed expectations. We believe in building long-term partnerships with our 
+                            clients, understanding their unique needs, and delivering tailored solutions that drive 
+                            real business value.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/brenda-profile.jpg" alt="Brenda Adong - Founder of Brandon Media" />
+                        <div class="image-caption">
+                            <h4>Brenda Adong</h4>
+                            <p>Founder & CEO</p>
+                            <p class="tagline">7+ Years in PR Management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <!-- Clients Section -->
+            <div class="clients-section">
+                <h3 class="clients-title">Our Valued Clients</h3>
+                <div class="clients-grid">
+                    <div class="clients-group">
+                        <h4>Current Clients</h4>
+                        <ul class="client-list">
+                            <li><i class="fas fa-check-circle"></i> Resurgence Network for Human Rights</li>
+                        </ul>
+                    </div>
+                    <div class="clients-group">
+                        <h4>Previous Clients</h4>
+                        <ul class="client-list">
+                            <li><i class="fas fa-check-circle"></i> WR Education Placement Consultants</li>
+                            <li><i class="fas fa-check-circle"></i> Brandon Tours and Travel</li>
+                            <li><i class="fas fa-check-circle"></i> Loyalist College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Background -->
+    <section id="services" class="services section-with-bg">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>📢 Digital Media Campaigns</h3>
+                    <p>Strategic digital media campaigns that amplify your message across multiple online channels to reach and engage your target audience effectively with cutting-edge technology.</p>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">🎯 Targeted Ads</span>
+                        <span class="tech-tag">📊 Analytics</span>
+                        <span class="tech-tag">🌐 Multi-Platform</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>📱 Social Media Management</h3>
+                    <p>Comprehensive social media strategies, AI-powered content creation, and intelligent community management to build your brand's online presence across all digital platforms.</p>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">🤖 AI Content</span>
+                        <span class="tech-tag">📈 Growth Hacking</span>
+                        <span class="tech-tag">💬 Engagement</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>🎤 Digital MC Services</h3>
+                    <p>Professional Master of Ceremonies services for virtual and hybrid events, with advanced presentation technology and interactive audience engagement tools.</p>
+                    <div class="service-image">
+                        <img src="images/Cooperate MC Services.jpeg" alt="Corporate MC Services" loading="lazy">
+                    </div>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">🎥 Virtual Events</span>
+                        <span class="tech-tag">🔴 Live Streaming</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trademark"></i>
+                    </div>
+                    <h3>🎨 Digital Branding Solutions</h3>
+                    <p>Complete digital branding packages from logo design to comprehensive brand identity development using cutting-edge design technology and market research.</p>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">🎨 AI Design</span>
+                        <span class="tech-tag">🔍 Market Research</span>
+                        <span class="tech-tag">💼 Brand Strategy</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3>🎙️ Tech Podcast Studio</h3>
+                    <p>Professional podcast recording studio with state-of-the-art equipment, acoustic treatment, and post-production services for content creators and businesses.</p>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">🎧 Pro Audio</span>
+                        <span class="tech-tag">📹 Video Podcast</span>
+                        <span class="tech-tag">🎬 Post-Production</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>💼 Digital PR Management</h3>
+                    <p>Strategic public relations services enhanced with digital tools, online reputation management, and data-driven stakeholder communications for maximum impact.</p>
+                    <div class="tech-highlights">
+                        <span class="tech-tag">📰 Media Relations</span>
+                        <span class="tech-tag">🛡️ Reputation Mgmt</span>
+                        <span class="tech-tag">📈 Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Service Gallery</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/Media campaigns.jpeg" alt="Media Campaigns" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Media Campaigns</h3>
+                        <p>Strategic campaigns that amplify your message across multiple channels</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/social-Media.jpeg" alt="Social Media Management" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Social Media Excellence</h3>
+                        <p>Comprehensive social media strategies and content creation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/branding.png" alt="Branding Solutions" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Brand Identity</h3>
+                        <p>Complete branding packages from concept to implementation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/podcast 1.jpeg" alt="Podcast Studio" loading="lazy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Podcast Production</h3>
+                        <p>Professional podcast recording and production services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Start a Conversation</h3>
+                    <p>Ready to take your digital presence to the next level? We'd love to hear from you.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>brendatrish54@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+256 775 555 405</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+256 727 010 078</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kampala, Uganda</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Brandon<span>Media</span></h3>
+                    <p>Your Communication Management & Growth Partner in Africa</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Media Campaigns</a></li>
+                        <li><a href="#services">Social Media Management</a></li>
+                        <li><a href="#services">Corporate MC Services</a></li>
+                        <li><a href="#services">Branding Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest projects and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brandon Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Futuristic Script -->
+    <script src="script.js"></script>
+    
+    <!-- CSS Animation Keyframes -->
+    <style>
+    @keyframes holoFadeIn {
+      0% { opacity: 0; transform: translateY(50px) scale(0.8); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    
+    .matrix-mode {
+      filter: hue-rotate(120deg) contrast(1.5);
+      animation: matrixGlitch 0.5s ease-in-out infinite;
+    }
+    
+    @keyframes matrixGlitch {
+      0%, 100% { filter: hue-rotate(120deg) contrast(1.5); }
+      25% { filter: hue-rotate(200deg) contrast(2); }
+      50% { filter: hue-rotate(280deg) contrast(1.8); }
+      75% { filter: hue-rotate(40deg) contrast(1.3); }
+    }
+    </style>
+</body>
+</html>
