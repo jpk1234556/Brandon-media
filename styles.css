@@ -5,6 +5,9 @@
   --primary-cyber: #00ffff;
   --primary-dark: #1e3a8a;
   --primary-light: #3b82f6;
+  --primary-color: #1e3a8a;
+  --accent-color: #00ffff;
+  --accent-bright: #39ff14;
   --neon-cyan: #00ffff;
   --neon-purple: #bf00ff;
   --neon-green: #39ff14;
@@ -19,9 +22,11 @@
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a2e;
   --bg-dark: #000000;
+  --bg-navy: #0a0a0a;
   --bg-cyber: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0a 100%);
   --glass-cyber: rgba(0, 255, 255, 0.1);
   --glass-border: rgba(0, 255, 255, 0.3);
+  --glass-bg: rgba(26, 26, 46, 0.8);
   
   /* Holographic Effects */
   --holo-gradient: linear-gradient(45deg, 
@@ -42,11 +47,14 @@
   --glow-green: 0 0 20px rgba(57, 255, 20, 0.5);
   --shadow-cyber: 0 8px 32px rgba(0, 255, 255, 0.2);
   --shadow-holo: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 255, 255, 0.2);
+  --shadow-xl: 0 20px 40px rgba(0, 255, 255, 0.3);
   
   /* Animation Timing */
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition: all 0.3s ease;
 }
 
 /* Futuristic Global Reset & Cyberpunk Foundation */

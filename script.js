@@ -20,7 +20,6 @@ class FuturisticBrandonMedia {
     this.initParallax();
     this.initScrollIndicator();
     this.initTechElements();
-    this.initAudioEffects();
   }
 
   // Holographic Loading System
@@ -264,7 +263,64 @@ class FuturisticBrandonMedia {
     this.autoSlide();
   }
 
-  // Enhanced Scroll Animations with Tech Effects
+  // Parallax Effects
+  initParallax() {
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    
+    if (parallaxElements.length === 0) return;
+    
+    const handleParallax = () => {
+      const scrolled = window.pageYOffset;
+      
+      parallaxElements.forEach(element => {
+        const rate = scrolled * -0.5;
+        element.style.transform = `translateY(${rate}px)`;
+      });
+    };
+    
+    window.addEventListener('scroll', debounce(handleParallax, 16));
+  }
+
+  // Scroll Indicator
+  initScrollIndicator() {
+    const indicator = document.createElement('div');
+    indicator.className = 'scroll-indicator';
+    document.body.appendChild(indicator);
+    
+    const updateIndicator = () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      indicator.style.transform = `scaleX(${scrollPercent / 100})`;
+    };
+    
+    window.addEventListener('scroll', updateIndicator);
+  }
+
+  // Tech Elements Animation
+  initTechElements() {
+    const techElements = document.querySelectorAll('.tech-element');
+    
+    techElements.forEach((element, index) => {
+      element.style.animationDelay = `${index * 0.5}s`;
+      
+      element.addEventListener('mouseenter', () => {
+        element.style.transform = 'scale(1.2) rotate(180deg)';
+        element.style.textShadow = '0 0 30px currentColor';
+      });
+      
+      element.addEventListener('mouseleave', () => {
+        element.style.transform = 'scale(1) rotate(0deg)';
+        element.style.textShadow = '';
+      });
+    });
+  }
+
+  // Trigger Hero Animation
+  triggerHeroAnimation() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      heroContent.classList.add('animate-fadeInUp');
+    }
+  }
   initScrollAnimations() {
     const observerOptions = {
       threshold: 0.1,
