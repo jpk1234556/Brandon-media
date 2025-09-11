@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-
-# Brandon-media
-
-# branding website
-
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+# 🚀 Brandon Media - Futuristic Digital Solutions
+# 🚀 Brandon Media - Futuristic Digital Solutions
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 # 🚀 Brandon Media - Futuristic Digital Solutions
 
 A cutting-edge, cyberpunk-inspired website for Brandon Media, showcasing modern communication and digital marketing services across Africa.
@@ -34,28 +33,48 @@ A cutting-edge, cyberpunk-inspired website for Brandon Media, showcasing modern 
 
 ## 🚀 Getting Started
 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+- Web browser (Chrome, Firefox, Safari, Edge)
 ### Prerequisites
 
+- Web browser (Chrome, Firefox, Safari, Edge)
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 - Web browser (Chrome, Firefox, Safari, Edge)
 - Python 3.x (for local development server)
 
 ### Installation
 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+```bash
 1. Clone the repository:
 
+```bash
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 ```bash
 git clone https://github.com/YOUR_USERNAME/brandon-media-website.git
 cd brandon-media-website
 ```
 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+```bash
 2. Start the development server:
 
+```bash
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 ```bash
 python -m http.server 8000
 ```
 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+```
 3. Open your browser and navigate to:
 
+```
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 ```
 http://localhost:8000
 ```
@@ -85,16 +104,26 @@ brandon-media-website/
 
 ## 🎮 Easter Eggs
 
+- **Keyboard Shortcuts**: 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 - **Matrix Mode**: Use Konami Code (↑↑↓↓←→←→BA) for special effects
 - **Keyboard Shortcuts**:
+=======
+- **Keyboard Shortcuts**: 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   - `Ctrl+H`: Navigate to Home
   - `Ctrl+S`: Navigate to Services
   - `Ctrl+C`: Navigate to Contact
 
 ## 📧 Contact
 
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+- Email: brendatrish54@gmail.com
 **Brandon Media**
 
+- Email: brendatrish54@gmail.com
+=======
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
 - Email: brendatrish54@gmail.com
 - Phone: +256 775 555 405 / +256 727 010 078
 - Location: Kampala, Uganda
@@ -122,6 +151,9 @@ This project is proprietary and confidential. All rights reserved by Brandon Med
 
 ---
 
-**Made with 💙 by Brandon Media** - _Your Futuristic Communication Partner in Africa_
-
-> > > > > > > df4c152 (Initial commit)
+**Made with 💙 by Brandon Media** - *Your Futuristic Communication Partner in Africa*
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+**Made with 💙 by Brandon Media** - *Your Futuristic Communication Partner in Africa*
+=======
+**Made with 💙 by Brandon Media** - *Your Futuristic Communication Partner in Africa*
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e

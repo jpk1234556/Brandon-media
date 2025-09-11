@@ -20,6 +20,10 @@ class FuturisticBrandonMedia {
     this.initParallax();
     this.initScrollIndicator();
     this.initTechElements();
+<<<<<<< HEAD
+=======
+    this.initAudioEffects();
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   }
 
   // Holographic Loading System
@@ -263,6 +267,7 @@ class FuturisticBrandonMedia {
     this.autoSlide();
   }
 
+<<<<<<< HEAD
   // Parallax Effects
   initParallax() {
     const parallaxElements = document.querySelectorAll('.parallax-element');
@@ -321,6 +326,9 @@ class FuturisticBrandonMedia {
       heroContent.classList.add('animate-fadeInUp');
     }
   }
+=======
+  // Enhanced Scroll Animations with Tech Effects
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   initScrollAnimations() {
     const observerOptions = {
       threshold: 0.1,
