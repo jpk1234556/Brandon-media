@@ -1,45 +1,17 @@
-    this.initAudioEffects();
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
-  }
 // Futuristic Web Design Engineer - Brandon Media Cyberpunk Interface
-// Performance Optimized Version
 
 class FuturisticBrandonMedia {
   constructor() {
     this.isLoaded = false;
     this.cyberCursor = null;
     this.matrixElements = [];
-    this.animationFrameId = null;
-    this.scrollTimeout = null;
-    this.resizeTimeout = null;
-    
-    // Performance tracking
-    this.performanceMetrics = {
-      startTime: performance.now(),
-      loadTime: 0,
-      renderTime: 0
-    };
-    
     this.init();
   }
 
   init() {
-    // Use requestIdleCallback for non-critical initializations
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        this.initMatrixBackground();
-        this.initTechElements();
-      });
-    } else {
-      setTimeout(() => {
-        this.initMatrixBackground();
-        this.initTechElements();
-      }, 100);
-    }
-    
-    // Critical path initializations
     this.initHolographicLoader();
     this.initCyberCursor();
+    this.initMatrixBackground();
     this.initNavigation();
     this.initSlideshow();
     this.initScrollAnimations();
@@ -47,126 +19,70 @@ class FuturisticBrandonMedia {
     this.initSmoothScrolling();
     this.initParallax();
     this.initScrollIndicator();
-  }
-=======
-    this.initAudioEffects();
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+    this.initTechElements();
   }
 
-  // Holographic Loading System - Performance Optimized
+  // Holographic Loading System
   initHolographicLoader() {
     const loader = document.getElementById('holoLoader');
     
-    if (!loader) return;
-    
-    // Reduce loading time for better perceived performance
-    const loadingTime = window.location.hash ? 1000 : 2000; // Faster for direct navigation
-    
-    // Use animation frame for smooth transition
-    const hideLoader = () => {
-      loader.style.opacity = '0';
-      loader.style.transform = 'scale(0.8)';
-      
-      setTimeout(() => {
+    // Simulate loading time
+    setTimeout(() => {
+      if (loader) {
         loader.classList.add('hidden');
         document.body.classList.remove('loading');
         this.isLoaded = true;
         this.triggerHeroAnimation();
-        
-        // Track performance
-        this.performanceMetrics.loadTime = performance.now() - this.performanceMetrics.startTime;
-        console.log(`⚡ Interface initialized in ${Math.round(this.performanceMetrics.loadTime)}ms`);
-      }, 300);
-    };
-    
-    setTimeout(hideLoader, loadingTime);
+      }
+    }, 3000);
   }
 
-  // Cyber Cursor System - Performance Optimized
+  // Cyber Cursor System
   initCyberCursor() {
     this.cyberCursor = document.getElementById('cyberCursor');
     
-    if (!this.cyberCursor || window.innerWidth <= 768) {
-      // Disable on mobile for performance
-      if (this.cyberCursor) this.cyberCursor.style.display = 'none';
-      return;
-    }
+    if (!this.cyberCursor) return;
     
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
-    let isIdle = false;
     
-    // Throttle mouse move events
-    const handleMouseMove = this.throttle((e) => {
+    document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      isIdle = false;
-    }, 16); // ~60fps
+    });
     
-    document.addEventListener('mousemove', handleMouseMove, { passive: true });
-    
-    // Optimized cursor animation
+    // Smooth cursor following
     const updateCursor = () => {
-      if (!isIdle) {
-        const dx = mouseX - cursorX;
-        const dy = mouseY - cursorY;
-        
-        cursorX += dx * 0.1;
-        cursorY += dy * 0.1;
-        
-        // Use transform for better performance
-        this.cyberCursor.style.transform = `translate(${cursorX - 10}px, ${cursorY - 10}px)`;
-        
-        // Mark as idle if movement is minimal
-        if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
-          isIdle = true;
-        }
-      }
+      const dx = mouseX - cursorX;
+      const dy = mouseY - cursorY;
       
-      this.animationFrameId = requestAnimationFrame(updateCursor);
+      cursorX += dx * 0.1;
+      cursorY += dy * 0.1;
+      
+      this.cyberCursor.style.left = cursorX - 10 + 'px';
+      this.cyberCursor.style.top = cursorY - 10 + 'px';
+      
+      requestAnimationFrame(updateCursor);
     };
     
     updateCursor();
     
-    // Optimized event listeners
+    // Cursor interactions
     document.addEventListener('mousedown', () => {
       this.cyberCursor.classList.add('active');
-    }, { passive: true });
+    });
     
     document.addEventListener('mouseup', () => {
       this.cyberCursor.classList.remove('active');
-    }, { passive: true });
+    });
+    
+    // Hide cursor on mobile
+    if (window.innerWidth <= 768) {
+      this.cyberCursor.style.display = 'none';
+    }
   }
 
-  // Performance Utilities
-  throttle(func, delay) {
-    let timeoutId;
-    let lastExecTime = 0;
-    return function (...args) {
-      const currentTime = Date.now();
-      
-      if (currentTime - lastExecTime > delay) {
-        func.apply(this, args);
-        lastExecTime = currentTime;
-      } else {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          func.apply(this, args);
-          lastExecTime = Date.now();
-        }, delay - (currentTime - lastExecTime));
-      }
-    };
-  }
-  
-  debounce(func, delay) {
-    let timeoutId;
-    return function (...args) {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func.apply(this, args), delay);
-    };
-  }
-
-  // Matrix Digital Rain Background - Optimized
+  // Matrix Digital Rain Background
   initMatrixBackground() {
     const matrixBg = document.getElementById('matrixBg');
     if (!matrixBg) return;
@@ -217,23 +133,21 @@ class FuturisticBrandonMedia {
     setInterval(drawMatrix, 50);
   }
 
-  // Navigation Enhancement - Performance Optimized
+  // Navigation Enhancement
   initNavigation() {
     const navbar = document.querySelector('.navbar');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Optimized navbar scroll effect with throttling
-    const handleScroll = this.throttle(() => {
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        navbar?.classList.add('scrolled');
+        navbar.classList.add('scrolled');
       } else {
-        navbar?.classList.remove('scrolled');
+        navbar.classList.remove('scrolled');
       }
-    }, 16); // ~60fps
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    });
 
     // Mobile menu toggle
     if (hamburger && navMenu) {
@@ -241,7 +155,7 @@ class FuturisticBrandonMedia {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
         document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-      }, { passive: true });
+      });
     }
 
     // Close mobile menu when clicking on links
@@ -250,13 +164,12 @@ class FuturisticBrandonMedia {
         hamburger?.classList.remove('active');
         navMenu?.classList.remove('active');
         document.body.style.overflow = '';
-      }, { passive: true });
+      });
     });
 
-    // Active link highlighting with throttling
-    const updateActiveLink = this.throttle(() => this.updateActiveNavLink(), 100);
-    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    // Active link highlighting
     this.updateActiveNavLink();
+    window.addEventListener('scroll', () => this.updateActiveNavLink());
   }
 
   updateActiveNavLink() {
@@ -350,7 +263,6 @@ class FuturisticBrandonMedia {
     this.autoSlide();
   }
 
-<<<<<<< HEAD
   // Parallax Effects
   initParallax() {
     const parallaxElements = document.querySelectorAll('.parallax-element');
@@ -409,9 +321,6 @@ class FuturisticBrandonMedia {
       heroContent.classList.add('animate-fadeInUp');
     }
   }
-=======
-  // Enhanced Scroll Animations with Tech Effects
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   initScrollAnimations() {
     const observerOptions = {
       threshold: 0.1,
@@ -694,71 +603,16 @@ window.addEventListener('scroll', optimizedScrollHandler);
 document.addEventListener('DOMContentLoaded', () => {
   window.futuristicBrandonMedia = new FuturisticBrandonMedia();
   
-  // Initialize lazy loading for images
-  initLazyLoading();
-  
-  // Enhanced performance monitoring with cyberpunk aesthetics
+  // Performance monitoring with cyberpunk aesthetics
   if ('performance' in window) {
     window.addEventListener('load', () => {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       const renderTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-      
       console.log(`⚡ CYBER INTERFACE LOADED IN ${loadTime}ms (RENDER: ${renderTime}ms)`);
       console.log('%cᾑ6 BRANDON MEDIA FUTURISTIC INTERFACE ONLINE', 'color: #00ffff; font-size: 16px; font-weight: bold;');
-      
-      // Performance warnings
-      if (loadTime > 3000) {
-        console.warn('⚠️ Performance Warning: Load time exceeded 3s. Consider optimizations.');
-      }
-      
-      // Log Core Web Vitals
-      new PerformanceObserver((entryList) => {
-        const entries = entryList.getEntries();
-        entries.forEach((entry) => {
-          console.log(`🎨 LCP: ${entry.startTime}ms`);
-        });
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
     });
   }
 });
-
-// Lazy Loading Implementation
-function initLazyLoading() {
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            img.classList.add('loaded');
-            observer.unobserve(img);
-          }
-        }
-      });
-    }, {
-      rootMargin: '50px 0px',
-      threshold: 0.1
-    });
-    
-    // Observe all images with data-src
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      imageObserver.observe(img);
-    });
-    
-    // Also observe regular lazy images
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-      imageObserver.observe(img);
-    });
-  } else {
-    // Fallback for browsers without IntersectionObserver
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
-  }
-}
 
 // Global functions for slideshow (backwards compatibility)
 window.currentSlide = (n) => {
@@ -810,17 +664,34 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Futuristic error handling
+// Performance monitoring with enhanced metrics
+if ('performance' in window) {
+  window.addEventListener('load', () => {
+    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    const renderTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+    console.log(`✨ Brandon Media loaded in ${loadTime}ms (render: ${renderTime}ms)`);
+    
+    // Log largest contentful paint
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        console.log(`🎨 LCP: ${entry.startTime}ms`);
+      });
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+  });
+}
+
+// Error handling
 window.addEventListener('error', (e) => {
-  console.error('⚠️ CYBER SYSTEM ERROR:', e.error);
+  console.error('JavaScript error:', e.error);
 });
 
-// Service Worker registration for caching (deployment optimization)
+// Service Worker registration for better performance (optional)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Enable for production deployment
+    // Uncomment to enable service worker
     // navigator.serviceWorker.register('/sw.js')
-    //   .then(registration => console.log('🛡️ SW registered'))
-    //   .catch(error => console.log('⚠️ SW registration failed'));
+    //   .then(registration => console.log('SW registered'))
+    //   .catch(error => console.log('SW registration failed'));
   });
 }

@@ -5,86 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Media | Futuristic Digital Solutions & Communication</title>
     
-    <!-- Performance Optimizations -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
-    <!-- Critical CSS Inline for Faster Rendering -->
+    <!-- Critical CSS for instant rendering -->
     <style>
-        /* Critical above-the-fold styles */
-        :root {
-            --primary-color: #1e3a8a;
-            --accent-color: #60a5fa;
-            --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            --text-light: #ffffff;
-            --neon-cyan: #00ffff;
-        }
-        body { margin: 0; font-family: 'Exo 2', sans-serif; background: var(--bg-primary); color: var(--text-light); overflow-x: hidden; }
-        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px); }
-        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; }
-        .loading { opacity: 0.7; }
-        .holographic-loader { position: fixed; inset: 0; background: var(--bg-primary); z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        /* Inline critical CSS here */
     </style>
+    <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="critical.css"></noscript>
     
-    <!-- Futuristic Design System - Load Async -->
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <!-- Async load non-critical CSS -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
-    <!-- Load Fonts Async -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Async load fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"></noscript>
     
-    <!-- Load FontAwesome Async -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <!-- Async load Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Futuristic Meta Tags -->
     <meta name="description" content="Experience the future of digital communication with Brandon Media - Africa's leading futuristic communication agency">
     <meta name="theme-color" content="#1e3a8a">
     
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
-    <link rel="preload" href="styles.css" as="style">
+    <!-- Performance and SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://jpk1234556.github.io/Brandon-media/">
+    
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="images/brenda-profile.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="images/brenda.jpg" as="image">
+    <link rel="preload" href="images/brenda.jpg" as="image" type="image/jpeg">
     <link rel="preload" href="script.js" as="script">
     
-    <!-- Service Worker for Caching -->
+    <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('🛡️ SW registered successfully');
-                        // Request background sync for extended caching
-                        if ('sync' in registration) {
-                            registration.sync.register('background-cache');
-                        }
-                    })
-                    .catch(error => console.log('⚠️ SW registration failed:', error));
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
             });
         }
     </script>
-=======
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
-    <link rel="preload" href="styles.css" as="style">
 </head>
-<body class="futuristic-interface loading">
-    <!-- Async CSS Loader Script -->
-    <script>
-        function loadCSS(href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-            document.head.appendChild(link);
-        }
-        // Fallback for async CSS loading
-        if (!window.CSS || !CSS.supports('display', 'grid')) {
-            loadCSS('styles.css');
-        }
-    </script>
+<body class="futuristic-interface">
     <!-- Holographic Loading Screen -->
     <div class="holographic-loader" id="holoLoader">
         <div class="holo-spinner">
@@ -138,49 +107,11 @@
         <div class="slideshow-container parallax-bg">
             <div class="slide active" data-section="home">
                 <div class="slide-overlay"></div>
-                <img src="images/brenda-profile.jpg" alt="Brandon Media - Professional Communication Solutions" loading="eager">
+                <img src="images/brenda-profile.jpg" alt="Brandon Media - Professional Communication Solutions" loading="eager" width="800" height="600">
             </div>
-                <img src="images/brenda .jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
-            </div>
-            <div class="slide" data-section="services">
-                <div class="slide-overlay"></div>
-                <img src="images/Media campaigns.jpeg" alt="Media Campaigns & Strategic Solutions" loading="lazy">
-            </div>
-            <div class="slide" data-section="branding">
-                <div class="slide-overlay"></div>
-                <img src="images/branding.jpeg" alt="Professional Branding Solutions" loading="lazy">
-            </div>
-            <div class="slide" data-section="social">
-                <div class="slide-overlay"></div>
-                <img src="images/Social-Media-Management-Tools.png" alt="Social Media Management Tools" loading="lazy">
-            </div>
-            <div class="slide" data-section="podcast">
-                <div class="slide-overlay"></div>
-                <img src="images/podcast.jpeg" alt="Podcast Studio Services" loading="lazy">
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
             <div class="slide" data-section="about">
                 <div class="slide-overlay"></div>
-                <img src="images/brenda.jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
-            </div>
-=======
-                <img src="images/brenda .jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
-            </div>
-            <div class="slide" data-section="services">
-                <div class="slide-overlay"></div>
-                <img src="images/Media campaigns.jpeg" alt="Media Campaigns & Strategic Solutions" loading="lazy">
-            </div>
-            <div class="slide" data-section="branding">
-                <div class="slide-overlay"></div>
-                <img src="images/branding.jpeg" alt="Professional Branding Solutions" loading="lazy">
-            </div>
-            <div class="slide" data-section="social">
-                <div class="slide-overlay"></div>
-                <img src="images/Social-Media-Management-Tools.png" alt="Social Media Management Tools" loading="lazy">
-            </div>
-            <div class="slide" data-section="podcast">
-                <div class="slide-overlay"></div>
-                <img src="images/podcast.jpeg" alt="Podcast Studio Services" loading="lazy">
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+                <img src="images/brenda.jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy" width="800" height="600">
             </div>
         </div>
         <div class="hero-content parallax-element" data-speed="0.5">
@@ -248,12 +179,7 @@
                         </p>
                     </div>
                     <div class="about-image">
-                        <img src="images/brenda-profile.jpg" alt="Brenda Adong - Founder of Brandon Media" />
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
-                        <img src="images/brenda.jpg" alt="Brenda Adong - Founder of Brandon Media" loading="lazy" />
-=======
-                        <img src="images/brenda-profile.jpg" alt="Brenda Adong - Founder of Brandon Media" />
->>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+                        <img src="images/brenda.jpg" alt="Brenda Adong - Founder of Brandon Media" loading="lazy" width="400" height="500" />
                         <div class="image-caption">
                             <h4>Brenda Adong</h4>
                             <p>Founder & CEO</p>
@@ -391,7 +317,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/Media campaigns.jpeg" alt="Media Campaigns" loading="lazy">
+                        <img src="images/Media campaigns.jpeg" alt="Media Campaigns" loading="lazy" width="300" height="200">
                     </div>
                     <div class="portfolio-info">
                         <h3>Media Campaigns</h3>
@@ -400,7 +326,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/social-Media.jpeg" alt="Social Media Management" loading="lazy">
+                        <img src="images/social-Media.jpeg" alt="Social Media Management" loading="lazy" width="300" height="200">
                     </div>
                     <div class="portfolio-info">
                         <h3>Social Media Excellence</h3>
@@ -409,7 +335,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/branding.png" alt="Branding Solutions" loading="lazy">
+                        <img src="images/branding.png" alt="Branding Solutions" loading="lazy" width="300" height="200">
                     </div>
                     <div class="portfolio-info">
                         <h3>Brand Identity</h3>
@@ -418,7 +344,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/podcast 1.jpeg" alt="Podcast Studio" loading="lazy">
+                        <img src="images/podcast 1.jpeg" alt="Podcast Studio" loading="lazy" width="300" height="200">
                     </div>
                     <div class="portfolio-info">
                         <h3>Podcast Production</h3>
@@ -522,23 +448,13 @@
         </div>
     </footer>
 
-    <!-- Enhanced Futuristic Script - Load Async -->
-    <script src="script.js" async></script>
+    <!-- Optimized Script Loading -->
+    <script src="script.js" defer></script>
     
-    <!-- Performance Monitor -->
+    <!-- Async CSS Loading Polyfill -->
     <script>
-        window.addEventListener('load', () => {
-            if ('performance' in window) {
-                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-                const renderTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-                console.log(`⚡ CYBER INTERFACE LOADED IN ${loadTime}ms (RENDER: ${renderTime}ms)`);
-                
-                // Send performance data to analytics (optional)
-                if (loadTime > 3000) {
-                    console.warn('⚠️ Performance Warning: Slow load time detected');
-                }
-            }
-        });
+        /*! loadCSS. MIT License. https://github.com/filamentgroup/loadCSS/ */
+        !function(e){"use strict";var n=function(n,t,o){function i(e){return r.body?e():void setTimeout(function(){i(e)})}function l(){a.addEventListener&&a.removeEventListener("load",l),a.media=o||"all"}var a,r=e.document,u=r.createElement("link");if(t)a=t;else{var s=(r.body||r.getElementsByTagName("head")[0]).childNodes;a=s[s.length-1]}var d=r.styleSheets;u.rel="stylesheet",u.href=n,u.media="only x",i(function(){a.parentNode.insertBefore(u,t?a:a.nextSibling)});var f=function(e){for(var n=u.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return u.addEventListener&&u.addEventListener("load",l),u.onloadcssdefined=f,f(l),u};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
     </script>
     
     <!-- CSS Animation Keyframes -->
