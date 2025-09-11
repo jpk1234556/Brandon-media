@@ -3,9 +3,9 @@
 :root {
   /* Futuristic Cyberpunk Palette */
   --primary-cyber: #00ffff;
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   --primary-dark: #1e3a8a;
   --primary-light: #3b82f6;
-<<<<<<< HEAD
   --primary-color: #1e3a8a;
   --accent-color: #00ffff;
   --accent-bright: #39ff14;
@@ -23,9 +23,12 @@
   --text-accent: #00ffff;
   --text-light: #ffffff;
   --bg-primary: #0a0a0a;
+  --bg-cyber: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0a 100%);
+  --glass-cyber: rgba(0, 255, 255, 0.1);
+  --glass-border: rgba(0, 255, 255, 0.3);
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   --bg-secondary: #1a1a2e;
   --bg-dark: #000000;
-<<<<<<< HEAD
   --bg-navy: #0a0a0a;
   --bg-cyber: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0a 100%);
   --glass-cyber: rgba(0, 255, 255, 0.1);
@@ -54,22 +57,50 @@
   --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
   --glow-purple: 0 0 20px rgba(191, 0, 255, 0.5);
   --glow-green: 0 0 20px rgba(57, 255, 20, 0.5);
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   --shadow-cyber: 0 8px 32px rgba(0, 255, 255, 0.2);
   --shadow-holo: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
   --shadow-lg: 0 10px 25px rgba(0, 255, 255, 0.2);
   --shadow-xl: 0 20px 40px rgba(0, 255, 255, 0.3);
 =======
 >>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   
   /* Animation Timing */
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-<<<<<<< HEAD
   --transition: all 0.3s ease;
 =======
 >>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+}
+
+/* Performance Optimizations */
+.parallax-element,
+.tech-element,
+.holo-ring,
+.cyber-cursor {
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slide,
+.service-card,
+.portfolio-item {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Futuristic Global Reset & Cyberpunk Foundation */
@@ -99,6 +130,12 @@ body {
   position: relative;
   overflow-x: hidden;
   cursor: none; /* Hide default cursor for custom cyber cursor */
+  
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  transform: translateZ(0); /* Hardware acceleration */
 }
 
 /* Holographic Loading Screen */

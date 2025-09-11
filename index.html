@@ -5,24 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Media | Futuristic Digital Solutions & Communication</title>
     
-    <!-- Futuristic Design System -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Critical CSS Inline for Faster Rendering -->
+    <style>
+        /* Critical above-the-fold styles */
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #60a5fa;
+            --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            --text-light: #ffffff;
+            --neon-cyan: #00ffff;
+        }
+        body { margin: 0; font-family: 'Exo 2', sans-serif; background: var(--bg-primary); color: var(--text-light); overflow-x: hidden; }
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px); }
+        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; }
+        .loading { opacity: 0.7; }
+        .holographic-loader { position: fixed; inset: 0; background: var(--bg-primary); z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+    
+    <!-- Futuristic Design System - Load Async -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Load Fonts Async -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"></noscript>
+    
+    <!-- Load FontAwesome Async -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Futuristic Meta Tags -->
     <meta name="description" content="Experience the future of digital communication with Brandon Media - Africa's leading futuristic communication agency">
     <meta name="theme-color" content="#1e3a8a">
     
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+    <link rel="preload" href="styles.css" as="style">
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="images/brenda-profile.jpg" as="image">
-<<<<<<< HEAD
+    <link rel="preload" href="images/brenda-profile.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="images/brenda.jpg" as="image">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Service Worker for Caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('🛡️ SW registered successfully');
+                        // Request background sync for extended caching
+                        if ('sync' in registration) {
+                            registration.sync.register('background-cache');
+                        }
+                    })
+                    .catch(error => console.log('⚠️ SW registration failed:', error));
+            });
+        }
+    </script>
 =======
 >>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
     <link rel="preload" href="styles.css" as="style">
 </head>
-<body class="futuristic-interface">
+<body class="futuristic-interface loading">
+    <!-- Async CSS Loader Script -->
+    <script>
+        function loadCSS(href) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+        }
+        // Fallback for async CSS loading
+        if (!window.CSS || !CSS.supports('display', 'grid')) {
+            loadCSS('styles.css');
+        }
+    </script>
     <!-- Holographic Loading Screen -->
     <div class="holographic-loader" id="holoLoader">
         <div class="holo-spinner">
@@ -78,10 +140,28 @@
                 <div class="slide-overlay"></div>
                 <img src="images/brenda-profile.jpg" alt="Brandon Media - Professional Communication Solutions" loading="eager">
             </div>
+                <img src="images/brenda .jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
+            </div>
+            <div class="slide" data-section="services">
+                <div class="slide-overlay"></div>
+                <img src="images/Media campaigns.jpeg" alt="Media Campaigns & Strategic Solutions" loading="lazy">
+            </div>
+            <div class="slide" data-section="branding">
+                <div class="slide-overlay"></div>
+                <img src="images/branding.jpeg" alt="Professional Branding Solutions" loading="lazy">
+            </div>
+            <div class="slide" data-section="social">
+                <div class="slide-overlay"></div>
+                <img src="images/Social-Media-Management-Tools.png" alt="Social Media Management Tools" loading="lazy">
+            </div>
+            <div class="slide" data-section="podcast">
+                <div class="slide-overlay"></div>
+                <img src="images/podcast.jpeg" alt="Podcast Studio Services" loading="lazy">
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
             <div class="slide" data-section="about">
                 <div class="slide-overlay"></div>
-<<<<<<< HEAD
                 <img src="images/brenda.jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
+            </div>
 =======
                 <img src="images/brenda .jpg" alt="About Brandon Media - Leadership & Experience" loading="lazy">
             </div>
@@ -168,8 +248,9 @@
                         </p>
                     </div>
                     <div class="about-image">
-<<<<<<< HEAD
-                        <img src="images/brenda.jpg" alt="Brenda Adong - Founder of Brandon Media" />
+                        <img src="images/brenda-profile.jpg" alt="Brenda Adong - Founder of Brandon Media" />
+>>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
+                        <img src="images/brenda.jpg" alt="Brenda Adong - Founder of Brandon Media" loading="lazy" />
 =======
                         <img src="images/brenda-profile.jpg" alt="Brenda Adong - Founder of Brandon Media" />
 >>>>>>> df4c152ebebe208869c79190d8ac635ae2d7ed6e
@@ -441,8 +522,24 @@
         </div>
     </footer>
 
-    <!-- Enhanced Futuristic Script -->
-    <script src="script.js"></script>
+    <!-- Enhanced Futuristic Script - Load Async -->
+    <script src="script.js" async></script>
+    
+    <!-- Performance Monitor -->
+    <script>
+        window.addEventListener('load', () => {
+            if ('performance' in window) {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                const renderTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+                console.log(`⚡ CYBER INTERFACE LOADED IN ${loadTime}ms (RENDER: ${renderTime}ms)`);
+                
+                // Send performance data to analytics (optional)
+                if (loadTime > 3000) {
+                    console.warn('⚠️ Performance Warning: Slow load time detected');
+                }
+            }
+        });
+    </script>
     
     <!-- CSS Animation Keyframes -->
     <style>
