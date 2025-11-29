@@ -1,54 +1,54 @@
 /* Modern Professional UI/UX Enhancement for Brandon Media */
 
 :root {
-  /* Futuristic Cyberpunk Palette */
-  --primary-cyber: #00ffff;
-  --primary-dark: #1e3a8a;
-  --primary-light: #3b82f6;
-  --primary-color: #1e3a8a;
-  --accent-color: #00ffff;
-  --accent-bright: #39ff14;
-  --neon-cyan: #00ffff;
-  --neon-purple: #bf00ff;
-  --neon-green: #39ff14;
-  --cyber-blue: #0080ff;
-  --cyber-pink: #ff0080;
-  --holographic: linear-gradient(45deg, #00ffff, #bf00ff, #39ff14, #ff0080);
-  --text-primary: #ffffff;
-  --text-secondary: #e0e6ed;
-  --text-muted: #b8c5d1;
-  --text-accent: #00ffff;
-  --text-light: #ffffff;
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a2e;
-  --bg-dark: #000000;
-  --bg-navy: #0a0a0a;
-  --bg-cyber: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0a 100%);
-  --glass-cyber: rgba(0, 255, 255, 0.1);
-  --glass-border: rgba(0, 255, 255, 0.3);
-  --glass-bg: rgba(26, 26, 46, 0.8);
+  /* Updated brand colors - White, Gold, Black theme */
+  --primary-cyber: #D4AF37; /* Gold */
+  --primary-dark: #FFFFFF; /* White */
+  --primary-light: #FFFFFF; /* White */
+  --primary-color: #FFFFFF; /* White */
+  --accent-color: #D4AF37; /* Gold */
+  --accent-bright: #D4AF37; /* Gold */
+  --neon-cyan: #D4AF37; /* Gold */
+  --neon-purple: #D4AF37; /* Gold */
+  --neon-green: #D4AF37; /* Gold */
+  --cyber-blue: #D4AF37; /* Gold */
+  --cyber-pink: #000000; /* Black */
+  --holographic: linear-gradient(45deg, #D4AF37, #000000, #D4AF37, #000000);
+  --text-primary: #000000; /* Black */
+  --text-secondary: #333333; /* Dark gray */
+  --text-muted: #666666; /* Gray */
+  --text-accent: #D4AF37; /* Gold */
+  --text-light: #000000; /* Black */
+  --bg-primary: #FFFFFF; /* White */
+  --bg-secondary: #FFFFFF; /* White */
+  --bg-dark: #FFFFFF; /* White */
+  --bg-navy: #FFFFFF; /* White */
+  --bg-cyber: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #FFFFFF 100%);
+  --glass-cyber: rgba(212, 175, 55, 0.1); /* Gold with transparency */
+  --glass-border: rgba(212, 175, 55, 0.3); /* Gold with transparency */
+  --glass-bg: rgba(255, 255, 255, 0.8); /* White with transparency */
   
-  /* Holographic Effects */
+  /* Updated holographic effects with gold/white/black theme */
   --holo-gradient: linear-gradient(45deg, 
-    rgba(0, 255, 255, 0.1) 0%,
-    rgba(191, 0, 255, 0.1) 25%,
-    rgba(57, 255, 20, 0.1) 50%,
-    rgba(255, 0, 128, 0.1) 75%,
-    rgba(0, 255, 255, 0.1) 100%);
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(0, 0, 0, 0.1) 25%,
+    rgba(212, 175, 55, 0.1) 50%,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(212, 175, 55, 0.1) 100%);
   
-  /* Typography - Futuristic Fonts */
+  /* Updated typography colors */
   --font-primary: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-display: 'Orbitron', 'Courier New', monospace;
   --font-code: 'Courier New', monospace;
   
-  /* Futuristic Shadows & Glows */
-  --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
-  --glow-purple: 0 0 20px rgba(191, 0, 255, 0.5);
-  --glow-green: 0 0 20px rgba(57, 255, 20, 0.5);
-  --shadow-cyber: 0 8px 32px rgba(0, 255, 255, 0.2);
-  --shadow-holo: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  --shadow-lg: 0 10px 25px rgba(0, 255, 255, 0.2);
-  --shadow-xl: 0 20px 40px rgba(0, 255, 255, 0.3);
+  /* Updated shadows & glows with gold theme */
+  --glow-cyan: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
+  --glow-purple: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
+  --glow-green: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
+  --shadow-cyber: 0 8px 32px rgba(212, 175, 55, 0.2); /* Gold shadow */
+  --shadow-holo: 0 15px 35px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(212, 175, 55, 0.2); /* Gold shadow */
+  --shadow-xl: 0 20px 40px rgba(212, 175, 55, 0.3); /* Gold shadow */
   
   /* Animation Timing */
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,8 +65,8 @@
 }
 
 *::selection {
-  background: var(--neon-cyan);
-  color: var(--bg-dark);
+  background: #D4AF37; /* Gold */
+  color: #FFFFFF; /* White */
   text-shadow: none;
 }
 
@@ -124,15 +124,15 @@ body {
 }
 
 .holo-ring:nth-child(1) {
-  border-top-color: var(--neon-cyan);
+  border-top-color: #D4AF37; /* Gold */
   animation-delay: 0s;
-  box-shadow: var(--glow-cyan);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
 }
 
 .holo-ring:nth-child(2) {
-  border-right-color: var(--neon-purple);
+  border-right-color: #FFFFFF; /* White */
   animation-delay: 0.3s;
-  box-shadow: var(--glow-purple);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White glow */
   width: 80%;
   height: 80%;
   top: 10%;
@@ -140,9 +140,9 @@ body {
 }
 
 .holo-ring:nth-child(3) {
-  border-bottom-color: var(--neon-green);
+  border-bottom-color: #D4AF37; /* Gold */
   animation-delay: 0.6s;
-  box-shadow: var(--glow-green);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
   width: 60%;
   height: 60%;
   top: 20%;
@@ -160,8 +160,8 @@ body {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
+  color: #D4AF37; /* Gold */
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
   animation: holoPulse 1.5s ease-in-out infinite;
 }
 
@@ -175,21 +175,21 @@ body {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
-  border: 1px solid var(--neon-cyan);
+  background: radial-gradient(circle, #D4AF37 0%, transparent 70%); /* Gold center */
+  border: 1px solid #D4AF37; /* Gold border */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.1s ease;
-  box-shadow: var(--glow-cyan);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
   mix-blend-mode: difference;
 }
 
 .cyber-cursor.active {
   transform: scale(2);
-  background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
-  border-color: var(--neon-purple);
-  box-shadow: var(--glow-purple);
+  background: radial-gradient(circle, #FFFFFF 0%, transparent 70%); /* White center */
+  border-color: #FFFFFF; /* White border */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White glow */
 }
 
 /* Holographic Matrix Background */
@@ -200,9 +200,9 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(191, 0, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(57, 255, 20, 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
   z-index: -1;
   pointer-events: none;
   opacity: 0.7;
@@ -216,8 +216,8 @@ body {
   right: 0;
   bottom: 0;
   background: 
-    linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%),
-    linear-gradient(180deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%);
+    linear-gradient(90deg, transparent 98%, rgba(212, 175, 55, 0.03) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(212, 175, 55, 0.03) 100%);
   background-size: 50px 50px;
   animation: matrixScroll 20s linear infinite;
 }
@@ -239,12 +239,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--glass-border);
   z-index: 1000;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 32px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 4px 32px rgba(212, 175, 55, 0.1);
 }
 
 .navbar::before {
@@ -259,9 +259,9 @@ body {
 }
 
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(30px) saturate(200%);
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
   border-bottom-color: var(--neon-cyan);
 }
 
@@ -894,19 +894,19 @@ body {
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: white;
+  color: #000000; /* Changed from white to black */
   padding: 1.5rem;
   text-align: center;
 }
 
 .image-caption h4 {
-  color: white;
+  color: #000000; /* Changed from white to black */
   margin-bottom: 0.5rem;
 }
 
 .image-caption p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9); /* Changed from white to black */
 }
 
 .image-caption .tagline {
@@ -1048,7 +1048,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #000000; /* Changed from white to black */
   font-size: 1.5rem;
   box-shadow: 0 8px 32px rgba(30, 58, 138, 0.3);
   border: 2px solid rgba(96, 165, 250, 0.3);
@@ -1117,7 +1117,7 @@ body {
 
 .tech-tag:hover {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: white;
+  color: #000000; /* Changed from white to black */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
@@ -1173,7 +1173,7 @@ body {
   justify-content: center;
   height: 100%;
   background: linear-gradient(135deg, #3b82f6, var(--accent-color));
-  color: white;
+  color: #000000; /* Changed from white to black */
   font-size: 2.25rem;
 }
 
@@ -1250,7 +1250,7 @@ body {
   width: 50px;
   height: 50px;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: white;
+  color: #000000; /* Changed from white to black */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1302,8 +1302,8 @@ body {
   border-radius: 0.5rem;
   font-family: var(--font-primary);
   transition: var(--transition-smooth);
-  background: rgba(10, 10, 10, 0.7);
-  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+  color: #000000; /* Black text for readability */
   font-size: 1rem;
 }
 
@@ -1317,8 +1317,8 @@ body {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--neon-cyan);
-  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
-  background: rgba(10, 10, 10, 0.9);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); /* Gold shadow */
+  background: #FFFFFF; /* White background when focused */
 }
 
 .form-group textarea {
@@ -1328,7 +1328,7 @@ body {
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-navy) 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%); /* Dark background for footer */
   color: white;
   padding: 4rem 0 2rem;
   position: relative;
@@ -1412,8 +1412,8 @@ body {
 
 .newsletter-form button {
   padding: 0.75rem 1rem;
-  background: var(--primary-color);
-  color: white;
+  background: var(--accent-color); /* Changed to gold */
+  color: #000000; /* Changed to black for contrast */
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -1422,7 +1422,8 @@ body {
 }
 
 .newsletter-form button:hover {
-  background: var(--primary-dark);
+  background: #D4AF37; /* Gold hover */
+  transform: translateY(-2px);
 }
 
 .footer-bottom {

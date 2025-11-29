@@ -26,7 +26,7 @@ class FuturisticBrandonMedia {
   initHolographicLoader() {
     const loader = document.getElementById('holoLoader');
     
-    // Simulate loading time
+    // Reduced loading time since we removed the text
     setTimeout(() => {
       if (loader) {
         loader.classList.add('hidden');
@@ -34,7 +34,7 @@ class FuturisticBrandonMedia {
         this.isLoaded = true;
         this.triggerHeroAnimation();
       }
-    }, 3000);
+    }, 500); // Reduced from 3000ms to 500ms
   }
 
   // Cyber Cursor System
@@ -609,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       const renderTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       console.log(`⚡ CYBER INTERFACE LOADED IN ${loadTime}ms (RENDER: ${renderTime}ms)`);
-      console.log('%cᾑ6 BRANDON MEDIA FUTURISTIC INTERFACE ONLINE', 'color: #00ffff; font-size: 16px; font-weight: bold;');
+      console.log('%c╡6 BRANDON MEDIA FUTURISTIC INTERFACE ONLINE', 'color: #00ffff; font-size: 16px; font-weight: bold;');
     });
   }
 });

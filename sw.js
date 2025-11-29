@@ -1,7 +1,7 @@
 // Brandon Media Service Worker - Advanced Caching Strategy
-const CACHE_NAME = 'brandon-media-v1.2';
-const STATIC_CACHE = 'static-v1.2';
-const DYNAMIC_CACHE = 'dynamic-v1.2';
+const CACHE_NAME = 'brandon-media-v1.7';
+const STATIC_CACHE = 'static-v1.7';
+const DYNAMIC_CACHE = 'dynamic-v1.7';
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
